@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philadelphia Wound Care | Mobile Wound Treatment & Allograft Therapy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1B2B4D;
+            --light-blue: #4AB8E3;
+            --white: #FFFFFF;
+            --gold: #D4AF37;
+            --light-gray: #F5F7FA;
+            --dark-gray: #333333;
+            --gradient: linear-gradient(135deg, var(--navy) 0%, var(--light-blue) 100%);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: #e6c035;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: #15243e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(27, 43, 77, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-navy {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .btn-outline-navy:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: var(--white);
+        }
+
+        .section-blue {
+            background: var(--light-blue);
+            color: var(--white);
+        }
+
+        .section-navy {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .section-gray {
+            background: var(--light-gray);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .logo-icon:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+        }
+
+        .logo-icon:after {
+            content: '+';
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 1rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--navy);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-blue);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--light-blue);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(27, 43, 77, 0.7), rgba(27, 43, 77, 0.5)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badges {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease 1s forwards;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy);
+            box-shadow: var(--shadow);
+        }
+
+        .badge i {
+            color: var(--gold);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-features {
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gold);
+            transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--light-blue);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .service-link:hover {
+            color: var(--navy);
+            gap: 10px;
+        }
+
+        /* Coverage Section */
+        .coverage-map {
+            margin-top: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+            background: #e9f7fe;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            color: var(--navy);
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--light-blue);
+        }
+
+        .counties-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .county {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .county:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* Testimonials Section */
+        .testimonial-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto 0;
+            overflow: hidden;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 20px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .testimonial-text:before, .testimonial-text:after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--light-blue);
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .testimonial-text:before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-text:after {
+            bottom: -40px;
+            right: -10px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--light-blue);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--light-blue);
+            opacity: 0.5;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-dot.active {
+            opacity: 1;
+            background: var(--gold);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: var(--light-blue);
+            color: var(--white);
+        }
+
+        .carousel-arrow.prev {
+            left: 0;
+        }
+
+        .carousel-arrow.next {
+            right: 0;
+        }
+
+        /* Form Section */
+        .form-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .form-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--light-blue);
+            box-shadow: 0 0 0 3px rgba(74, 184, 227, 0.2);
+        }
+
+        .file-upload {
+            border: 2px dashed #ddd;
+            border-radius: 5px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .file-upload:hover {
+            border-color: var(--light-blue);
+            background: rgba(74, 184, 227, 0.05);
+        }
+
+        .file-upload i {
+            font-size: 2rem;
+            color: var(--light-blue);
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        .info-card {
+            background: var(--light-blue);
+            border-radius: 10px;
+            padding: 30px;
+            color: var(--white);
+        }
+
+        .info-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            width: 20px;
+        }
+
+        .timeline {
+            margin-top: 30px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .timeline-number {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+
+        /* Providers Section */
+        .providers-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .provider-features {
+            margin: 25px 0;
+        }
+
+        .provider-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .provider-feature i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: var(--gradient);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner h2:after {
+            background: var(--gold);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 70px 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        .footer-logo .logo-text {
+            font-size: 1rem;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--light-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            color: var(--gold);
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-bottom-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links-bottom {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links-bottom a {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links-bottom a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Floating Elements */
+        .floating-call {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            z-index: 99;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(27, 43, 77, 0.4);
+            z-index: 99;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--light-blue);
+            transform: translateY(-5px);
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chat-bubble {
+            width: 60px;
+            height: 60px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(74, 184, 227, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 400px;
+            height: 600px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .chat-window.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-title h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .chat-title p {
+            margin: 0;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .chat-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-control {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chat-control:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 15px;
+            border-radius: 18px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message-bot {
+            align-self: flex-start;
+            background: #f0f8ff;
+            border-bottom-left-radius: 5px;
+            color: var(--navy);
+        }
+
+        .message-user {
+            align-self: flex-end;
+            background: var(--navy);
+            color: var(--white);
+            border-bottom-right-radius: 5px;
+        }
+
+        .message-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .option-btn {
+            padding: 10px 15px;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .option-btn:hover {
+            background: var(--light-blue);
+            color: var(--white);
+            border-color: var(--light-blue);
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 12px 15px;
+            background: #f0f8ff;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            align-self: flex-start;
+            width: fit-content;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        .chat-footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+        }
+
+        .chat-send {
+            width: 45px;
+            height: 45px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .chat-send:hover {
+            background: var(--navy);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(74, 184, 227, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(74, 184, 227, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 184, 227, 0); }
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-container, .form-container, .providers-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .chat-window {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .header-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .chat-window {
+                width: 100vw;
+                height: 100vh;
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .counties-list {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">PHILADELPHIA WOUND CARE</div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#providers">For Providers</a></li>
+                    <li><a href="#resources">Patient Resources</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="header-buttons">
+                    <a href="#contact" class="btn btn-primary">Request Visit</a>
+                    <a href="tel:2155550100" class="btn btn-outline-navy">Call (215) 555-0100</a>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Advanced Mobile Wound Care — At Your Doorstep</h1>
+                <p>We bring hospital-level wound care and regenerative therapy directly to your home or facility.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Request a Home Visit</a>
+                    <a href="#providers" class="btn btn-secondary">Refer a Patient</a>
+                    <a href="tel:2155550100" class="btn btn-outline">Call Now: (215) 555-0100</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="trust-badges">
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i>
+                Medicare Accepted
+            </div>
+            <div class="badge">
+                <i class="fas fa-lock"></i>
+                HIPAA Compliant
+            </div>
+            <div class="badge">
+                <i class="fas fa-certificate"></i>
+                PA Licensed
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-light" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dr. John F. Curtis IV with medical team">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Compassionate Care, Advanced Treatment</h2>
+                    <p>Philadelphia Wound Care brings hospital-quality wound treatment directly to your doorstep. Led by Dr. John F. Curtis IV, MD, our specialized team provides comprehensive mobile wound care using the latest allograft and regenerative therapies—all covered by Medicare.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div>
+                                <h4>Board-certified wound care specialists</h4>
+                                <p>Our team includes experienced physicians and nurses specializing in wound management.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                            <div>
+                                <h4>Mobile service to homes and facilities</h4>
+                                <p>We come to you—whether at home, nursing facility, or assisted living center.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div>
+                                <h4>Medicare and most insurances accepted</h4>
+                                <p>Our services are covered by Medicare Part B, Medicare Advantage, and most private insurance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4>Fast response and scheduling</h4>
+                                <p>We typically schedule visits within 24-48 hours of your request.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#about" class="btn btn-primary">Learn More About Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-gray" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2>Comprehensive Wound Care Services</h2>
+                <p>Expert treatment for all types of chronic and acute wounds</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Wound Care</h3>
+                    <p>Professional wound assessment and treatment in the comfort of your home. We handle debridement, dressing changes, and ongoing monitoring.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Allograft & Regenerative Therapy</h3>
+                    <p>Advanced skin substitutes and regenerative treatments for chronic wounds. Medicare-covered allografts promote faster healing.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <h3>Diabetic Foot Ulcers</h3>
+                    <p>Specialized care for diabetic wounds with high infection risk. Our protocol reduces amputation risk and promotes healing.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Pressure Ulcer Management</h3>
+                    <p>Expert treatment for bedsores in all stages. We provide offloading strategies and advanced wound therapies.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Post-Surgical Wound Care</h3>
+                    <p>Comprehensive post-operative wound management including infection prevention and surgical site monitoring.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Facility-Based Care</h3>
+                    <p>Partnership programs for nursing homes, assisted living, and healthcare facilities throughout Greater Philadelphia.</p>
+                    <a href="#services" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Area Section -->
+    <section class="section section-navy" id="coverage">
+        <div class="container">
+            <div class="text-center">
+                <h2>Serving Greater Philadelphia</h2>
+                <p>Mobile wound care across 5 counties</p>
+            </div>
+            
+            <div class="coverage-map">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Service Area Map</h3>
+                    <p>Philadelphia Wound Care serves patients throughout the Greater Philadelphia region</p>
+                </div>
+            </div>
+            
+            <div class="counties-list">
+                <div class="county">Philadelphia County</div>
+                <div class="county">Montgomery County</div>
+                <div class="county">Bucks County</div>
+                <div class="county">Delaware County</div>
+                <div class="county">Chester County</div>
+            </div>
+            
+            <p class="text-center" style="margin-top: 30px;">Coverage area includes a 50-mile radius from Philadelphia</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-blue" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2>What Our Patients Say</h2>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">The team from Philadelphia Wound Care was incredible. They treated my diabetic ulcer at home and it finally healed after months of struggle. Medicare covered everything!</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1551836026-d5c88ac5d691?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Margaret T.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Margaret T.</h4>
+                                    <p>Diabetic Foot Ulcer Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">Dr. Curtis and his team were professional, compassionate, and thorough. My pressure sore healed completely in just 6 weeks with their allograft treatment.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Robert K.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Robert K.</h4>
+                                    <p>Pressure Ulcer Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">I couldn't believe they came to my home! No more painful trips to the clinic. The wound care I received was top-notch and covered by my insurance.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Linda M.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Linda M.</h4>
+                                    <p>Post-Surgical Wound Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-arrow prev" id="prevTestimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel-arrow next" id="nextTestimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                
+                <div class="carousel-controls">
+                    <div class="carousel-dot active" data-index="0"></div>
+                    <div class="carousel-dot" data-index="1"></div>
+                    <div class="carousel-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section section-light" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2>Schedule Your Free Wound Assessment</h2>
+                <p>Our team will evaluate your wound and create a personalized treatment plan</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-card">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address *</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <select id="state" name="state" required>
+                                    <option value="PA">Pennsylvania</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code *</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="woundType">Wound Type *</label>
+                            <select id="woundType" name="woundType" required>
+                                <option value="">Select wound type</option>
+                                <option value="diabetic">Diabetic Ulcer</option>
+                                <option value="pressure">Pressure Ulcer</option>
+                                <option value="surgical">Surgical Wound</option>
+                                <option value="venous">Venous Ulcer</option>
+                                <option value="arterial">Arterial Ulcer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="woundDuration">How long have you had this wound? *</label>
+                            <input type="text" id="woundDuration" name="woundDuration" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="insurance">Insurance Provider *</label>
+                            <select id="insurance" name="insurance" required>
+                                <option value="">Select insurance</option>
+                                <option value="medicare">Medicare Part B</option>
+                                <option value="advantage">Medicare Advantage</option>
+                                <option value="medicaid">Medicaid</option>
+                                <option value="private">Private Insurance</option>
+                                <option value="self">Self-Pay</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Upload Wound Photo (Optional)</label>
+                            <div class="file-upload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your file here or <span style="color: var(--light-blue);">click to browse</span></p>
+                                <p class="small">Supported: JPG, PNG (max 5MB)</p>
+                                <p><i class="fas fa-shield-alt" style="color: var(--gold);"></i> HIPAA secure</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Additional Notes (Optional)</label>
+                            <textarea id="notes" name="notes" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">I consent to receive appointment reminders via phone/text *</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">Request My Visit Now <i class="fas fa-arrow-right"></i></button>
+                        
+                        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+                            <i class="fas fa-shield-alt" style="color: var(--gold);"></i> Your information is protected by HIPAA and SSL encryption
+                        </p>
+                    </form>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Need immediate assistance?</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:2155550100" style="color: white;">(215) 555-0100</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@philadelphiawoundcare.com" style="color: white;">info@philadelphiawoundcare.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-fax"></i>
+                            <span>(215) 555-0101</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Monday-Friday, 8 AM - 6 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <h3>What to expect</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-number">1</div>
+                            <div>Submit your information</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">2</div>
+                            <div>Receive confirmation call within 2 hours</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">3</div>
+                            <div>Schedule your home visit</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">4</div>
+                            <div>Meet our wound care specialist</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 5px; margin-top: 20px;">
+                        <p style="margin: 0; font-size: 0.9rem;"><strong>Emergency note:</strong> For medical emergencies, call 911</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Providers Section -->
+    <section class="section section-navy" id="providers">
+        <div class="container">
+            <div class="providers-container">
+                <div class="providers-content">
+                    <h2>Healthcare Providers & Facilities</h2>
+                    <p>Partner with us for comprehensive wound care solutions</p>
+                    
+                    <div class="provider-features">
+                        <div class="provider-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Easy electronic referrals</div>
+                        </div>
+                        <div class="provider-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Detailed progress reports</div>
+                        </div>
+                        <div class="provider-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Collaborative care approach</div>
+                        </div>
+                        <div class="provider-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Accepted by all major insurance</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#providers" class="btn btn-primary">Refer a Patient Now</a>
+                </div>
+                
+                <div class="form-card">
+                    <h3>Provider Referral Form</h3>
+                    <form id="providerForm">
+                        <div class="form-group">
+                            <label for="providerName">Your Name & Title *</label>
+                            <input type="text" id="providerName" name="providerName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="facilityName">Facility/Practice Name *</label>
+                            <input type="text" id="facilityName" name="facilityName" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="providerPhone">Phone *</label>
+                                <input type="tel" id="providerPhone" name="providerPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="providerEmail">Email *</label>
+                                <input type="email" id="providerEmail" name="providerEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patientName">Patient Name *</label>
+                            <input type="text" id="patientName" name="patientName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patientPhone">Patient Phone *</label>
+                            <input type="tel" id="patientPhone" name="patientPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="woundHistory">Wound Type & Brief History *</label>
+                            <textarea id="woundHistory" name="woundHistory" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Upload Documents (Optional)</label>
+                            <div class="file-upload">
+                                <i class="fas fa-file-upload"></i>
+                                <p>Face sheet, wound photos, etc.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="updates" name="updates">
+                                <label for="updates">Send me progress updates</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Referral</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Experience Expert Wound Care at Home?</h2>
+            <p>Join hundreds of patients who have found healing with Philadelphia Wound Care</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary" style="min-width: 200px;">Schedule My Visit</a>
+                <a href="#providers" class="btn btn-outline" style="min-width: 200px;">Refer a Patient</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.2rem;">Or call us now: <a href="tel:2155550100" style="color: white; text-decoration: underline;">(215) 555-0100</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="logo-text">PHILADELPHIA WOUND CARE</div>
+                    </div>
+                    <div class="footer-about">
+                        <p>Bringing Hospital-Quality Wound Care to Your Doorstep</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#providers">For Providers</a></li>
+                        <li><a href="#resources">Patient Resources</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Home Wound Care</a></li>
+                        <li><a href="#services">Allograft Therapy</a></li>
+                        <li><a href="#services">Diabetic Ulcers</a></li>
+                        <li><a href="#services">Pressure Ulcers</a></li>
+                        <li><a href="#services">Post-Surgical Care</a></li>
+                        <li><a href="#services">Facility Partnerships</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(215) 555-0100</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@philadelphiawoundcare.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-fax"></i>
+                            <span>(215) 555-0101</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Philadelphia, PA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri, 8 AM - 6 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-container">
+                    <div class="copyright">
+                        © 2024 Philadelphia Wound Care, LLC. All rights reserved.
+                    </div>
+                    
+                    <div class="footer-links-bottom">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">HIPAA Notice</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Site Map</a>
+                    </div>
+                    
+                    <div class="footer-badges">
+                        <div class="footer-badge">Medicare</div>
+                        <div class="footer-badge">HIPAA</div>
+                        <div class="footer-badge">PA Licensed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <a href="tel:2155550100" class="floating-call">
+        <i class="fas fa-phone"></i>
+    </a>
+    
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-bubble" id="chatBubble">
+            <i class="fas fa-comment-medical"></i>
+        </div>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-title">
+                        <h3>Wound Care Assistant</h3>
+                        <p>Online • HIPAA Secure</p>
+                    </div>
+                </div>
+                
+                <div class="chat-controls">
+                    <div class="chat-control" id="minimizeChat">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="chat-control" id="closeChat">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-body" id="chatBody">
+                <!-- Messages will be added here by JavaScript -->
+            </div>
+            
+            <div class="chat-footer">
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button class="chat-send" id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Scroll to Top Button
+        const scrollTop = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+        
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Testimonial Carousel
+        const testimonialTrack = document.getElementById('testimonialTrack');
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.getElementById('prevTestimonial');
+        const nextBtn = document.getElementById('nextTestimonial');
+        
+        let currentSlide = 0;
+        const slideCount = testimonialSlides.length;
+        
+        function goToSlide(index) {
+            if (index < 0) index = slideCount - 1;
+            if (index >= slideCount) index = 0;
+            
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+        
+        // Auto-play carousel
+        let carouselInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+        
+        // Pause on hover
+        const carousel = document.querySelector('.testimonial-carousel');
+        carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carousel.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+        });
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        const providerForm = document.getElementById('providerForm');
+        
+        function validateForm(form) {
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+                
+                // Email validation
+                if (input.type === 'email' && input.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value)) {
+                        input.style.borderColor = 'red';
+                        isValid = false;
+                    }
+                }
+                
+                // Phone validation
+                if (input.type === 'tel' && input.value) {
+                    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+                    if (!phoneRegex.test(input.value.replace(/\s/g, ''))) {
+                        input.style.borderColor = 'red';
+                        isValid = false;
+                    }
+                }
+            });
+            
+            return isValid;
+        }
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (validateForm(contactForm)) {
+                // Show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you! We\'ll contact you within 2 hours to schedule your visit.');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+        });
+        
+        providerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (validateForm(providerForm)) {
+                // Show loading state
+                const submitBtn = providerForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you! Your referral has been submitted successfully.');
+                    providerForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+        });
+
+        // Chat Widget
+        const chatBubble = document.getElementById('chatBubble');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatBody = document.getElementById('chatBody');
+        const chatInput = document.getElementById('chatInput');
+        const sendMessageBtn = document.getElementById('sendMessage');
+        const closeChatBtn = document.getElementById('closeChat');
+        const minimizeChatBtn = document.getElementById('minimizeChat');
+        
+        let chatOpen = false;
+        let chatStep = 0;
+        let userData = {};
+        
+        // Initial bot message
+        function initChat() {
+            addBotMessage("Hello! 👋 Can I help you with your wound care needs?");
+            
+            // Add options
+            setTimeout(() => {
+                const options = [
+                    { text: "Yes, I have a wound", value: "has_wound" },
+                    { text: "I want to refer a patient", value: "refer_patient" },
+                    { text: "Just browsing", value: "browsing" }
+                ];
+                
+                addOptions(options);
+            }, 1000);
+        }
+        
+        // Add bot message to chat
+        function addBotMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message message-bot';
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            chatBody.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        // Add user message to chat
+        function addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message message-user';
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            chatBody.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        // Add typing indicator
+        function addTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            `;
+            chatBody.appendChild(typingDiv);
+            scrollToBottom();
+        }
+        
+        // Remove typing indicator
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        // Add options to chat
+        function addOptions(options) {
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'message message-bot';
+            
+            let optionsHTML = '<div class="message-options">';
+            options.forEach(option => {
+                optionsHTML += `<button class="option-btn" data-value="${option.value}">${option.text}</button>`;
+            });
+            optionsHTML += '</div>';
+            
+            optionsDiv.innerHTML = optionsHTML;
+            chatBody.appendChild(optionsDiv);
+            scrollToBottom();
+            
+            // Add event listeners to option buttons
+            const optionButtons = optionsDiv.querySelectorAll('.option-btn');
+            optionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const value = button.getAttribute('data-value');
+                    const text = button.textContent;
+                    addUserMessage(text);
+                    handleOptionSelection(value, text);
+                });
+            });
+        }
+        
+        // Handle option selection
+        function handleOptionSelection(value, text) {
+            // Remove existing options
+            const optionsDiv = document.querySelector('.message-options');
+            if (optionsDiv) {
+                optionsDiv.parentElement.remove();
+            }
+            
+            // Process based on current step and selection
+            if (chatStep === 0) {
+                if (value === "has_wound") {
+                    chatStep = 1;
+                    userData.hasWound = true;
+                    
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("I'm here to help. How long have you had this wound?");
+                        chatStep = 2;
+                    }, 1500);
+                } else if (value === "refer_patient") {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("Great! Please use our provider referral form or call us directly at (215) 555-0100.");
+                        resetChat();
+                    }, 1500);
+                } else {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("Feel free to explore our website. If you have any questions, don't hesitate to ask!");
+                        resetChat();
+                    }, 1500);
+                }
+            }
+        }
+        
+        // Handle text input
+        function handleTextInput(text) {
+            if (chatStep === 2) {
+                userData.woundDuration = text;
+                
+                addTypingIndicator();
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    addBotMessage("What size is the wound and what caused it?");
+                    chatStep = 3;
+                }, 1500);
+            } else if (chatStep === 3) {
+                userData.woundDetails = text;
+                
+                // Check if user mentioned diabetes
+                if (text.toLowerCase().includes('diabetes') || text.toLowerCase().includes('diabetic')) {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("I understand. Diabetic wounds need special care. Would you like to upload a photo? Don't worry, this information is protected by HIPAA. 🔒");
+                        
+                        setTimeout(() => {
+                            const options = [
+                                { text: "Upload Photo", value: "upload_photo" },
+                                { text: "Skip", value: "skip_photo" }
+                            ];
+                            
+                            addOptions(options);
+                        }, 500);
+                    }, 1500);
+                } else {
+                    proceedToInsurance();
+                }
+            } else if (chatStep === 4) {
+                if (text === "upload_photo") {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("Please use the file upload area in our contact form. Your information is secure.");
+                        proceedToInsurance();
+                    }, 1500);
+                } else if (text === "skip_photo") {
+                    proceedToInsurance();
+                }
+            } else if (chatStep === 5) {
+                userData.insurance = text;
+                
+                if (text === "Medicare Part B") {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("Great news! Medicare covers allografts for your non-healing wound. Let me help you schedule a visit at no cost to you.");
+                        
+                        setTimeout(() => {
+                            addBotMessage("Please select a preferred date and time for your visit:");
+                            
+                            // In a real implementation, this would be a calendar widget
+                            setTimeout(() => {
+                                const options = [
+                                    { text: "Tomorrow, 10 AM", value: "tomorrow_10am" },
+                                    { text: "Tomorrow, 2 PM", value: "tomorrow_2pm" },
+                                    { text: "Day after tomorrow, 11 AM", value: "day_after_11am" }
+                                ];
+                                
+                                addOptions(options);
+                            }, 1000);
+                        }, 1500);
+                    }, 1500);
+                } else {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addBotMessage("Thank you! We'll verify your coverage and contact you to schedule your visit.");
+                        resetChat();
+                    }, 1500);
+                }
+                
+                chatStep = 6;
+            } else if (chatStep === 6) {
+                userData.appointmentTime = text;
+                
+                addTypingIndicator();
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    addBotMessage(`Perfect! Your home wound care visit is scheduled for ${text}. We'll send you a confirmation message shortly.`);
+                    
+                    setTimeout(() => {
+                        addBotMessage("Thank you for choosing Philadelphia Wound Care. Have a fantastic day! 🌟");
+                        
+                        setTimeout(() => {
+                            const options = [
+                                { text: "Start New Conversation", value: "new_conversation" }
+                            ];
+                            
+                            addOptions(options);
+                        }, 1000);
+                    }, 1500);
+                }, 1500);
+            }
+        }
+        
+        function proceedToInsurance() {
+            chatStep = 5;
+            
+            addTypingIndicator();
+            setTimeout(() => {
+                removeTypingIndicator();
+                addBotMessage("Thank you! What insurance do you have?");
+                
+                setTimeout(() => {
+                    const options = [
+                        { text: "Medicare Part B", value: "Medicare Part B" },
+                        { text: "Medicaid", value: "Medicaid" },
+                        { text: "Medicare Advantage", value: "Medicare Advantage" },
+                        { text: "Private Insurance", value: "Private Insurance" },
+                        { text: "Other", value: "Other" }
+                    ];
+                    
+                    addOptions(options);
+                }, 500);
+            }, 1500);
+        }
+        
+        function resetChat() {
+            chatStep = 0;
+            userData = {};
+            
+            setTimeout(() => {
+                const options = [
+                    { text: "Yes, I have a wound", value: "has_wound" },
+                    { text: "I want to refer a patient", value: "refer_patient" },
+                    { text: "Just browsing", value: "browsing" }
+                ];
+                
+                addOptions(options);
+            }, 1000);
+        }
+        
+        // Scroll to bottom of chat
+        function scrollToBottom() {
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        // Toggle chat window
+        chatBubble.addEventListener('click', () => {
+            if (!chatOpen) {
+                chatWindow.classList.add('active');
+                chatOpen = true;
+                
+                // Initialize chat if empty
+                if (chatBody.children.length === 0) {
+                    initChat();
+                }
+            } else {
+                chatWindow.classList.remove('active');
+                chatOpen = false;
+            }
+        });
+        
+        // Close chat
+        closeChatBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+            chatOpen = false;
+        });
+        
+        // Minimize chat
+        minimizeChatBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+            chatOpen = false;
+        });
+        
+        // Send message on button click
+        sendMessageBtn.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if (message) {
+                addUserMessage(message);
+                chatInput.value = '';
+                handleTextInput(message);
+            }
+        });
+        
+        // Send message on Enter key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const message = chatInput.value.trim();
+                if (message) {
+                    addUserMessage(message);
+                    chatInput.value = '';
+                    handleTextInput(message);
+                }
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Phone number formatting
+        const phoneInputs = document.querySelectorAll('input[type="tel"]');
+        phoneInputs.forEach(input => {
+            input.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    value = value.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+                    e.target.value = !value[2] ? value[1] : '(' + value[1] + ') ' + value[2] + (value[3] ? '-' + value[3] : '');
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .about-image, .about-content, .form-card, .info-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
